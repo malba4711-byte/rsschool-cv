@@ -1,1 +1,1 @@
-My CV project
+https://malba4711-byte.github.io/rsschool-cv/

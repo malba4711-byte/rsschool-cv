@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malba's CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="toggler">
+      <label for="toggler" class="container align burger-container">
+        <div class="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+        <h3>Menu</h3>
+      </label>
+      <ul class="menu container">
+        <li><a href="#">Brief</a></li>
+        <li><a href="#contact_information">Contact information</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#code_example">Code example</a></li>
+        <li><a href="#list_of_educational_projects">Educational projects</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main: The unique content of this specific page -->
+  <main class="container column">
+    <section id="brief" class="container">
+      <div class="image-wrapper">
+        <img class="image" src="./assets/img/animal.webp" alt="self_picture">
+      </div>
+      <div class="brief-text-wrapper">
+        <h1>Malba the Sloth</h1>
+        <p>Incredible Front-end noob. Who wants to master his skills.</p>
+      </div>
+    </section>
+    <section id="contact_information">
+      <h2>Contact information</h1>
+        <div class="contact container">
+          <a href="mailto:malba47.11@gmail.com">Send me an email</a>
+          <a href="tel:+48123456789">+48 XXX-XXX-XXX</a>
+        </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="container space-between">
+        <ul class="skills container column">
+          <li>HTML5: Semantic markup, accessibility basics</li>
+          <li>CSS: basics Flexbox, and CSS Grid for layout creation</li>
+          <li>JavaScript: some functions, promises, and async/await</li>
+          <li>TypeScript: basics</li>
+          <li>Version Control (Git): Ability to use basic commands</li>
+          <li>CSS Preprocessors: Using tools like Sass or LESS to write cleaner</li>
+          <li>Python: Basic concepts</li>
+        </ul>
+        <ul class="skills container column">
+          <li>Problem Solving</li>
+          <li>Communication: Effectively explaining technical choices</li>
+          <li>Willingness to Learn: The tech stack evolves rapidly</li>
+          <li>Team player: boots productivity and team value</li>
+          <li>Active Supporter: help remove blockers for others</li>
+        </ul>
+      </div>
+    </section>
+    <section id="code_example">
+      <h2>Code example</h2>
+      <pre>
+        <code>
+          git commit -m "Initial commit"
+          git push origin main
+        </code>
+      </pre>
+    </section>
+    <section id="list_of_educational_projects">
+      <h2>Educational projects</h2>
+      <ul class="examplex container column">
+        <li><a href="https://www.codewars.com/">Codewars 1</a></li>
+        <li><a href="https://www.codewars.com/">Codewars 2</a></li>
+      </ul>
+    </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="education container column">
+        <li>Higher education</li>
+        <li>Online english anguage education courses</li>
+        <li>English language proficiency: Upper-intermediate level </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container space-between align">
+    <a href="https://github.com/malba4711-byte">GitHub</a>
+    <p>&copy; 2026 CV RSSchool</p>
+    <a href="https://rs.school/courses/short-track">RS School course</a>
+  </footer>
+  <script>
+    if (window.innerWidth < 768) {
+      const menu = document.querySelector('.menu');
+      const menuButton = document.querySelector('.burger-container');
+      const checkbox = document.getElementById('toggler');
+
+      menu.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('none');
+      });
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        if (checkbox.checked) {
+          checkbox.checked = false;
+          menu.classList.toggle('none');
+        }
+
+      });
+    }
+  </script>
+</body>
+
+</html>
