@@ -1,9 +1,8 @@
 :root {
   --main-blue: #1677ff;
-  --main-white: #FFF;
+  --main-white: #fff;
   --gap: 20px;
   --padding: 20px;
-
 }
 
 html {
@@ -72,12 +71,16 @@ header a {
   flex-wrap: wrap;
 }
 
-.column{
+.column {
   flex-direction: column;
 }
 
 .space-between {
   justify-content: space-between;
+}
+
+.none {
+  display: none !important;
 }
 
 .align {
@@ -87,4 +90,49 @@ header a {
 section {
   border: 1px solid rgba(5, 5, 5, 0.06);
   border-radius: 20px;
+}
+
+.burger-container,
+.burger,
+#toggler {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .burger-container {
+    display: flex;
+    cursor: pointer;
+  }
+  .burger {
+    display: block;
+  }
+
+  .burger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background: var(--main-white);
+  }
+
+  #toggler:checked ~ .menu {
+    display: flex;
+  }
 }

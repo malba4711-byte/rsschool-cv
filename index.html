@@ -11,8 +11,17 @@
 <body>
   <header>
     <nav>
+      <input type="checkbox" id="toggler">
+      <label for="toggler" class="container align burger-container">
+        <div class="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </div>
+        <h3>Menu</h3>
+      </label>
       <ul class="menu container">
-        <li><a href="#brief">Brief</a></li>
+        <li><a href="#">Brief</a></li>
         <li><a href="#contact_information">Contact information</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#code_example">Code example</a></li>
@@ -87,12 +96,32 @@
     </section>
   </main>
 
-  <!-- Footer: Copyright, legal links, and social icons -->
   <footer class="container space-between align">
     <a href="https://github.com/malba4711-byte">GitHub</a>
     <p>&copy; 2026 CV RSSchool</p>
     <a href="https://rs.school/courses/short-track">RS School course</a>
   </footer>
+  <script>
+    if (window.innerWidth < 768) {
+      const menu = document.querySelector('.menu');
+      const menuButton = document.querySelector('.burger-container');
+      const checkbox = document.getElementById('toggler');
+
+      menu.addEventListener('click', (e) => {
+        e.stopPropagation();
+        menu.classList.toggle('none');
+      });
+      menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        if (checkbox.checked) {
+          checkbox.checked = false;
+          menu.classList.toggle('none');
+        }
+
+      });
+    }
+  </script>
 </body>
 
 </html>
