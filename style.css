@@ -132,7 +132,7 @@ section {
     background: var(--main-white);
   }
 
-  #toggler:checked ~ .menu {
+  .menu.open {
     display: flex;
   }
 }
