@@ -11,15 +11,14 @@
 <body>
   <header>
     <nav>
-      <input type="checkbox" id="toggler">
-      <label for="toggler" class="container align burger-container">
+      <div class="container align burger-container">
         <div class="burger">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
           <span class="burger-line"></span>
         </div>
         <h3>Menu</h3>
-      </label>
+      </div>
       <ul class="menu container">
         <li><a href="#">Brief</a></li>
         <li><a href="#contact_information">Contact information</a></li>
@@ -31,7 +30,6 @@
     </nav>
   </header>
 
-  <!-- Main: The unique content of this specific page -->
   <main class="container column">
     <section id="brief" class="container">
       <div class="image-wrapper">
@@ -109,16 +107,11 @@
 
       menu.addEventListener('click', (e) => {
         e.stopPropagation();
-        menu.classList.toggle('none');
+        menu.classList.toggle('open');
       });
       menuButton.addEventListener('click', (e) => {
         e.stopPropagation();
-
-        if (checkbox.checked) {
-          checkbox.checked = false;
-          menu.classList.toggle('none');
-        }
-
+        menu.classList.toggle('open');
       });
     }
   </script>
